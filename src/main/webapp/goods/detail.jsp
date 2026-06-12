@@ -45,7 +45,7 @@ p {
 			</tr>
 			<tr>
 				<td colspan="4" class="text-right">
-					<a href="list.do?tno=${tno }" class="btn btn-sm btn-success">목록</a>
+					<a href="list.do?tno=${tno }&page=${page}" class="btn btn-sm btn-success">목록</a>
 				</td>
 			</tr>
 		</table>

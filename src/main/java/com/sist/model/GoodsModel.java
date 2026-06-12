@@ -55,7 +55,7 @@ public class GoodsModel {
 	public String goods_detail(HttpServletRequest request, HttpServletResponse response) {
 		String no=request.getParameter("no");
 		String tno=request.getParameter("tno");
-		
+		int page=(Integer.parseInt(no)-1)/12+1;
 		Map map=new HashMap();
 		map.put("no", Integer.parseInt(no));
 		map.put("table", table[Integer.parseInt(tno)]);
@@ -64,6 +64,7 @@ public class GoodsModel {
 		
 		request.setAttribute("vo", vo);
 		request.setAttribute("tno", tno);
+		request.setAttribute("page", page);
 		
 		return "../goods/detail.jsp";
 	}
