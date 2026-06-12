@@ -27,6 +27,13 @@ public class GoodsModel {
 		"신상품",
 		"특가 상품"
 	};
+	
+	private String[] order= {
+		"",
+		"no ASC",
+		"hit DESC",
+		"goods_name ASC"
+	};
 	@RequestMapping("goods/list.do")
 	public String goods_list(HttpServletRequest request, HttpServletResponse response) {
 		String page=request.getParameter("page");
